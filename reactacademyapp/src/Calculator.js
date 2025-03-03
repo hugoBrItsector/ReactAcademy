@@ -12,7 +12,7 @@ function Calculator() {
   };
 
   const btnClean = () => {
-    document.querySelector(".Result").innerHTML = "0";
+    setResult("0");
   };
 
   return (
