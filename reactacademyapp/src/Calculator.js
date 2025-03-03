@@ -15,6 +15,10 @@ function Calculator() {
     setResult("0");
   };
 
+  const btnEquals = () => {
+    setResult(eval(result));
+  };
+
   return (
     <div className="Container">
       <div className="Result">{result}</div>
@@ -54,7 +58,7 @@ function Calculator() {
         <button id="btn9" onClick={() => btnLogic("9")}>
           9
         </button>
-        <button id="btnTimes" onClick={() => btnLogic("x")}>
+        <button id="btnTimes" onClick={() => btnLogic("*")}>
           X
         </button>
         <br></br>
@@ -64,7 +68,9 @@ function Calculator() {
         <button id="btnClean" onClick={btnClean}>
           C
         </button>
-        <button id="btnEquals">=</button>
+        <button id="btnEquals" onClick={btnEquals}>
+          =
+        </button>
       </div>
     </div>
   );
